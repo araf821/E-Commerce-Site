@@ -48,6 +48,14 @@ body {
   max-width: var(--max-width);
 }
 
+.underline {
+  width: 6rem;
+  height: 0.25rem;
+  background: var(--clr-retro-red);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 a {
   text-decoration: none;
   color: var(--clr-dark); //gotta change
@@ -287,7 +295,58 @@ footer {
 //                   About                    //
 ////////////////////////////////////////////////
 
+.about-page {
+  display: grid;
+  gap: 2.5rem;
+  width: 80vw;
+  max-width: 1170px;
 
+  img {
+    width: 90%;
+    display: block;
+    height: 500px;
+    border-radius: 0.4rem;
+    object-fit: cover;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    line-height: 2;
+    max-width: 45em;
+    margin-top: 2rem;
+  }
+
+  .underline {
+    margin-left: 0;
+  }
+
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+////////////////////////////////////////////////
+//                 Page Hero                  //
+////////////////////////////////////////////////
+
+.page-hero {
+  width: 100%;
+  height: 15vh;
+  background-color: var(--clr-retro-red);
+  display: flex;
+  align-items: center;
+
+  .content {
+    color: var(--clr-light);
+    align-items: center;
+    margin: 0 auto;
+    width: 85vw;
+    max-width: 1170px;
+  }
+}
 
 ////////////////////////////////////////////////
 //                   Error                    //
