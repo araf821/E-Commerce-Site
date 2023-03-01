@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaBars, FaUserAlt } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import { links } from "../data";
 import NavButtons from "./NavButtons";
 
@@ -9,7 +9,14 @@ const Navbar = () => {
       <div className="nav-content">
         <div className="nav-header">
           <Link to="/">
-            <h1>BrandName</h1>
+            <h1>
+              <span>
+                Brand
+                <span>
+                  Name
+                </span>
+              </span>
+            </h1>
           </Link>
           <button className="nav-toggle">
             <FaBars />

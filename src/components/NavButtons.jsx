@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaUserAlt } from "react-icons/fa";
 
 const NavButtons = () => {
   return (
@@ -11,6 +11,10 @@ const NavButtons = () => {
           <span className="cart-value">0</span>
         </span>
       </Link>
+      <button className="auth-btn">
+        Login
+        <FaUserAlt />
+      </button>
     </div>
   );
 };
