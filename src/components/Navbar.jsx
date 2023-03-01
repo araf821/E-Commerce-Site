@@ -2,8 +2,11 @@ import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { links } from "../data";
 import NavButtons from "./NavButtons";
+import { useProductContext } from "../context/products_context";
 
 const Navbar = () => {
+  const { openSidebar } = useProductContext();
+
   return (
     <nav className="navbar-component">
       <div className="nav-content">
@@ -12,13 +15,11 @@ const Navbar = () => {
             <h1>
               <span>
                 Brand
-                <span>
-                  Name
-                </span>
+                <span>Name</span>
               </span>
             </h1>
           </Link>
-          <button className="nav-toggle">
+          <button className="nav-toggle" onClick={openSidebar}>
             <FaBars />
           </button>
         </div>

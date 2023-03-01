@@ -3,13 +3,16 @@ import NavButtons from "./NavButtons";
 import { FaTimes } from "react-icons/fa";
 import { links } from "../data";
 import { useState } from "react";
+import { useProductContext } from "../context/products_context";
 
 const Sidebar = () => {
-  const [open, setOpen] = useState(false)
+  const { isSidebarOpen, closeSidebar } = useProductContext();
 
   return (
     <div className="sidebar-container">
-      <aside className={`${open ? "sidebar show-sidebar" : "sidebar"}`}>
+      <aside
+        className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}
+      >
         <div className="sidebar-header">
           <h1>
             <Link to="/">
@@ -17,7 +20,7 @@ const Sidebar = () => {
               <span>Name</span>
             </Link>
           </h1>
-          <button className="close-btn" onClick={() => setOpen(false)} >
+          <button className="close-btn" onClick={closeSidebar}>
             <FaTimes />
           </button>
         </div>
