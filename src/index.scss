@@ -10,11 +10,11 @@
 }
 
 // Not sure if I'll be implementing these.
-.dark-theme {
-}
+// .dark-theme {
+// }
 
-.light-theme {
-}
+// .light-theme {
+// }
 
 * {
   margin: 0;
@@ -29,6 +29,23 @@ body {
   background-color: var(--clr-light);
   line-height: 1.5;
   font-size: 0.875rem;
+}
+
+////////////////////////////////////////////////
+//               Global Styles                //
+////////////////////////////////////////////////
+
+.page {
+  min-height: calc(100vh - (20vh + 10rem));
+}
+
+.section {
+  padding: 5rem 0;
+}
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
 }
 
 a {
@@ -267,6 +284,12 @@ footer {
 }
 
 ////////////////////////////////////////////////
+//                   About                    //
+////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////
 //                   Error                    //
 ////////////////////////////////////////////////
 
@@ -281,5 +304,4 @@ footer {
   h1 {
     font-size: 8rem;
   }
-
 }
