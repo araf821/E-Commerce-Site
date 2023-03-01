@@ -82,7 +82,6 @@ a {
   }
 
   @media (width > 990px) {
-
     h1 {
       font-size: 1.75rem;
     }
@@ -174,5 +173,32 @@ a {
     svg {
       margin-left: 5px;
     }
+  }
+}
+
+////////////////////////////////////////////////
+//                  Navbar                    //
+////////////////////////////////////////////////
+
+footer {
+  font-size: 1.25rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-dark);
+  text-align: center;
+  color: var(--clr-light);
+
+  h5 {
+    margin: 0.1rem;
+    font-weight: 400;
+    text-transform: none;
+    line-height: 1.25;
+  }
+
+  @media (min-width: 776px) {
+    flex-direction: row;
   }
 }
