@@ -8,11 +8,13 @@ import SingleProduct from "./pages/SingleProductPage";
 import PrivateRoute from "./pages/PrivateRoute";
 import Checkout from "./pages/CheckoutPage";
 import Error from "./pages/Error";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <Sidebar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
