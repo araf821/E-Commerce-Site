@@ -244,4 +244,24 @@ footer {
     cursor: pointer;
     margin-top: 0.2rem;
   }
+
+  .links {
+    a {
+      display: block;
+      font-size: 1rem;
+      padding: 1rem 1.5rem;
+      color: var(--clr-dark);
+      letter-spacing: 0.25rem;
+    }
+  }
+
+  .nav-buttons {
+    margin: 1rem auto;
+  }
+
+  @media screen and (min-width: 992px) {
+    .sidebar {
+      display: none;
+    }
+  }
 }

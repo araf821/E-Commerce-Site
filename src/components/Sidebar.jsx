@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import NavButtons from "./NavButtons";
 import { FaTimes } from "react-icons/fa";
 import { links } from "../data";
+import { useState } from "react";
 
 const Sidebar = () => {
-  const open = true;
+  const [open, setOpen] = useState(false)
 
   return (
     <div className="sidebar-container">
@@ -16,12 +17,22 @@ const Sidebar = () => {
               <span>Name</span>
             </Link>
           </h1>
-          <button className="close-btn">
+          <button className="close-btn" onClick={() => setOpen(false)} >
             <FaTimes />
           </button>
         </div>
 
-        <ul className="links"></ul>
+        <ul className="links">
+          {links.map((link) => {
+            const { id, text, url } = link;
+            return (
+              <li key={id}>
+                <Link to={url}>{text}</Link>
+              </li>
+            );
+          })}
+        </ul>
+        <NavButtons />
       </aside>
     </div>
   );
