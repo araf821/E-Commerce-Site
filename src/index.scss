@@ -265,3 +265,21 @@ footer {
     }
   }
 }
+
+////////////////////////////////////////////////
+//                   Error                    //
+////////////////////////////////////////////////
+
+.error {
+  min-height: calc(100vh - 10rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(-8rem);
+
+  h1 {
+    font-size: 8rem;
+  }
+
+}
