@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { FaBars, FaShoppingCart, FaUserAlt } from "react-icons/fa";
+import { FaBars, FaUserAlt } from "react-icons/fa";
 import { links } from "../data";
+import NavButtons from "./NavButtons";
 
 const Navbar = () => {
   return (
@@ -24,12 +25,7 @@ const Navbar = () => {
           })}
         </ul>
         <div className="nav-buttons">
-          <button>
-            <FaShoppingCart />
-          </button>
-          <button>
-            <FaUserAlt />
-          </button>
+          <NavButtons />
         </div>
       </div>
     </nav>
