@@ -1,5 +1,106 @@
+////////////////////////////////////////////////
+//                 Variables                  //
+////////////////////////////////////////////////
+
+:root {
+}
+
+.dark-theme {
+}
+
+.light-theme {
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  color: #0a182c;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+////////////////////////////////////////////////
+//                  Navbar                    //
+////////////////////////////////////////////////
+
+.navbar-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+
+  .nav-content {
+    width: 85vw;
+    margin: 0 auto;
+    max-width: 1170px;
+  }
+
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-toggle {
+    background: transparent;
+    border: transparent;
+    color: black;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-buttons {
+    display: none;
+  }
+
+  @media (width > 990px) {
+    .nav-toggle {
+      display: none;
+    }
+
+    .nav-content {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+
+      li {
+        list-style-type: none;
+        margin: 0 0.5rem;
+      }
+
+      a {
+        font-size: 1rem;
+        letter-spacing: 5px;
+        padding: 0.5rem;
+
+        &:hover {
+          // ------- SAVING FOR LATER ----------
+          transform: scale(1.5);
+        }
+      }
+    }
+
+    .nav-buttons {
+      display: grid;
+    }
+  }
 }
