@@ -4,6 +4,7 @@
 
 :root {
   --clr-light: #ffeedc;
+  --clr-light-dark: #ffeedcec;
   --clr-light-light: #fff9f2;
   --clr-dark: #2e3840;
   --clr-dark-light: #4a5155;
@@ -423,16 +424,18 @@ footer {
   background: var(--clr-retro-red);
   color: var(--clr-light);
 
-  h3, h4 {
+  h3,
+  h4 {
     color: var(--clr-primary-1);
     text-transform: capitalize;
     font-size: 2rem;
   }
-  
+
   p {
     margin-bottom: 0;
     line-height: 1.8;
     font-size: 1rem;
+    color: var(--clr-light-dark);
   }
 
   .services-center {
@@ -440,7 +443,7 @@ footer {
     display: grid;
     gap: 2.5rem;
   }
-  
+
   .service {
     background: var(--clr-retro-blue);
     text-align: center;
@@ -462,7 +465,7 @@ footer {
       font-size: 2rem;
     }
   }
-  
+
   @media (min-width: 992px) {
     .header {
       display: grid;
@@ -476,12 +479,70 @@ footer {
       grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     }
   }
-  
+
   @media (min-width: 1280px) {
     padding: 0;
-    
+
     .section-center {
       transform: translateY(4rem);
+    }
+  }
+}
+
+// ------------------- CONTACT SECTION -----------------------
+
+.contact-section {
+  h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    font-size: 1rem;
+    color: var(--clr-dark-light);
+  }
+
+  form {
+    width: 85vw;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+
+    input,
+    button {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      border: 2px solid var(--clr-dark);
+    }
+
+    input {
+      border-right: none;
+      color: var(--clr-dark-light);
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+    }
+
+    button {
+      background-color: var(--clr-retro-blue);
+      color: var(--clr-light-light);
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      cursor: pointer;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .section-center {
+      padding: 8rem 0;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    form {
+      margin: 0 auto;
     }
   }
 }

@@ -9,9 +9,9 @@ const Services = () => {
             custom furniture <br /> built only for you
           </h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-            dolorum debitis consectetur reprehenderit non aliquam voluptates
-            dolore aut vero consequuntur.
+            Salvia glossier subway tile, leggings mustache YOLO semiotics chia.
+            Pitchfork tbh af blog church-key leggings vaporware PBR&B master
+            cleanse post-ironic man bun pabst mustache letterpress synth.
           </p>
         </article>
         <div className="services-center">
