@@ -169,7 +169,6 @@ h5 {
         padding: 0.5rem;
         transition: all 2s linear;
       }
-
     }
 
     .nav-buttons {
@@ -600,6 +599,8 @@ footer {
   background-color: var(--clr-retro-red);
   display: flex;
   align-items: center;
+  text-transform: capitalize;
+  letter-spacing: 0.35rem;
 
   .content {
     color: var(--clr-light);
@@ -675,6 +676,14 @@ footer {
       font-size: 1rem;
     }
   }
+}
+
+////////////////////////////////////////////////
+//               Single Product               //
+////////////////////////////////////////////////
+
+.single-product-page {
+
 }
 
 ////////////////////////////////////////////////
