@@ -2,8 +2,12 @@ import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Product = ({ id, image, name, price }) => {
-  const formatPrice = () => {
-
+  const formatPrice = (number) => {
+    const newNumber = Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    }).format(number / 100);
+    return newNumber;
   };
 
   return (
@@ -16,7 +20,7 @@ const Product = ({ id, image, name, price }) => {
       </div>
       <div className="product-footer">
         <h5>{name}</h5>
-        <p>{price}</p>
+        <p>{formatPrice(price)}</p>
       </div>
     </section>
   );

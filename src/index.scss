@@ -113,6 +113,10 @@ h5 {
     justify-content: space-between;
     letter-spacing: 0.25rem;
 
+    h1 {
+      font-size: 1.75rem;
+    }
+
     h1 span span {
       color: var(--clr-retro-red);
     }
@@ -135,10 +139,6 @@ h5 {
   }
 
   @media (width > 990px) {
-    h1 {
-      font-size: 1.75rem;
-    }
-
     .nav-toggle {
       display: none;
     }
@@ -169,6 +169,7 @@ h5 {
         padding: 0.5rem;
         transition: all 2s linear;
       }
+
     }
 
     .nav-buttons {
@@ -267,7 +268,11 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
+
+    h1 {
+      font-size: 1.75rem;
+    }
 
     h1 span {
       color: var(--clr-retro-red);
@@ -616,11 +621,16 @@ footer {
     place-items: center;
 
     a {
+      display: grid;
+      place-items: center;
+      background-color: var(--clr-retro-red);
+      padding: 0.75rem;
+      border-radius: 50%;
       opacity: 0;
       cursor: pointer;
       color: var(--clr-light);
       position: absolute;
-      font-size: 2rem;
+      font-size: 1.5rem;
       transition: var(--default-transition);
     }
 
