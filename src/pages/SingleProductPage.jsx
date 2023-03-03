@@ -50,8 +50,7 @@ const SingleProductPage = () => {
             <h2 className="item-name">
               <span>{name}</span>
             </h2>
-            <Stars stars={stars} />
-            <p>{reviews} user reviews</p>
+            <Stars stars={stars} reviews={reviews} />
             <hr />
             <h4 className="price" >{formatPrice(price)}</h4>
             <p className="desc">{description}</p>
