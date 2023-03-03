@@ -13,7 +13,7 @@ const FeaturedProducts = () => {
 
   if (products_error || featured_products.length === 0) {
     return (
-      <section className="section featured-section">
+      <section className="featured-section">
         <div className="title">
           <h2>Featured Products</h2>
           <div className="underline"></div>
