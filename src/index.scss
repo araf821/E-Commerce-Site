@@ -625,3 +625,13 @@ footer {
     font-size: 8rem;
   }
 }
+
+.loader {
+  display: grid;
+  place-items: center;
+
+  img {
+    background: transparent;
+  }
+
+}
