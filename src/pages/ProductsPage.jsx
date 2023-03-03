@@ -1,4 +1,10 @@
+import PageHero from "../components/PageHero";
+
 const Products = () => {
-  return <div>Products</div>;
+  return (
+    <main>
+      <PageHero pageName="Products" />
+    </main>
+  );
 };
 export default Products;

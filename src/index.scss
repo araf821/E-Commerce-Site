@@ -625,9 +625,14 @@ footer {
     }
 
     img {
+      border-radius: 0.4rem;
       height: 225px;
       width: 100%;
       transition: var(--default-transition);
+
+      @media (width < 895px) {
+        height: 100%;
+      }
     }
 
     &:hover {
@@ -642,6 +647,7 @@ footer {
   }
 
   .product-footer {
+    color: var(--clr-light-light);
     text-transform: capitalize;
     padding: 0.5rem 0;
     display: flex;
