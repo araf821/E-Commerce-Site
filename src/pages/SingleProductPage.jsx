@@ -44,23 +44,28 @@ const SingleProductPage = () => {
       <PageHero pageName={item.name} />
       <section className="section page section-center">
         <Link to="/products">Back to Products</Link>
-        <ProductImages images={images} />
-        <article className="product-info">
-          <h2>{name}</h2>
-          <Stars stars={stars} />
-          <p>{reviews} user reviews</p>
-          <h5>{formatPrice(price)}</h5>
-          <p className="desc">{description}</p>
-          <h5>
-            Availability:
-            <span>{stock > 0 ? " In Stock" : " Out of Stock"}</span>
-          </h5>
-          <h5>
-            Brand:
-            <span> {company}</span>
-          </h5>
-          {stock > 0 && <AddToCart />}
-        </article>
+        <div className="divider">
+          <ProductImages images={images} />
+          <article className="product-info">
+            <h2 className="item-name">
+              <span>{name}</span>
+            </h2>
+            <Stars stars={stars} />
+            <p>{reviews} user reviews</p>
+            <hr />
+            <h4 className="price" >{formatPrice(price)}</h4>
+            <p className="desc">{description}</p>
+            <h5>
+              Availability:
+              <span>{stock > 0 ? " In Stock" : " Out of Stock"}</span>
+            </h5>
+            <h5>
+              Brand:
+              <span> {company}</span>
+            </h5>
+            {stock > 0 && <AddToCart />}
+          </article>
+        </div>
       </section>
     </main>
   );
