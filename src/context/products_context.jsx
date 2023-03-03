@@ -11,6 +11,9 @@ const initialStates = {
   products_error: false,
   products: [],
   featured_products: [],
+  item_loading: false,
+  item_error: false,
+  item: {},
 };
 
 export const ProductsProvider = ({ children }) => {
@@ -36,12 +39,25 @@ export const ProductsProvider = ({ children }) => {
     }
   };
 
+  const fetchItem = async (url) => {
+    dispatch({ type: "GET_ITEM_START" });
+    try {
+      const response = await axios.get(url);
+      const item = response.data;
+      dispatch({ type: "GET_ITEM_SUCCESS", payload: item });
+    } catch (error) {
+      dispatch({ type: "GET_ITEM_ERROR" });
+    }
+  };
+
   useEffect(() => {
     fetchProducts();
   }, []);
 
   return (
-    <ProductsContext.Provider value={{ ...state, openSidebar, closeSidebar }}>
+    <ProductsContext.Provider
+      value={{ ...state, openSidebar, closeSidebar, fetchItem }}
+    >
       {children}
     </ProductsContext.Provider>
   );

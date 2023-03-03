@@ -7,7 +7,7 @@ import Products from "./pages/ProductsPage";
 import SingleProduct from "./pages/SingleProductPage";
 import PrivateRoute from "./pages/PrivateRoute";
 import Checkout from "./pages/CheckoutPage";
-import Error from "./pages/Error";
+import ErrorPage from "./pages/ErrorPage";
 import Sidebar from "./components/Sidebar";
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route path="error" element={<Error />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -1,25 +1,30 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import PageHero from "../components/PageHero";
+import { useProductContext } from "../context/products_context";
 import { single_product_url } from "../data";
+import Loader from '../components/Loader'
 
 const SingleProductPage = () => {
-  const [product, setProduct] = useState({});
+  const { item_loading, item_error, item, fetchItem } = useProductContext();
   const { id } = useParams();
 
-  const fetchProduct = async () => {
-    const response = await axios.get(`${single_product_url}${id}`);
-    setProduct(response.data);
-  };
-
   useEffect(() => {
-    fetchProduct();
-  }, []);
+    fetchItem(`${single_product_url}${id}`);
+  }, [id]);
+
+  if (item_loading) {
+    return <Loader />
+  }
+
+  if (item_error) {
+    
+  }
 
   return (
     <main className="single-product-page">
-      <PageHero pageName={product.name} />
+      <PageHero pageName={item.name} />
+      <Link to="/products"></Link>
     </main>
   );
 };
