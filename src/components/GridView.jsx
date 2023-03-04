@@ -2,8 +2,8 @@ import Product from "./Product";
 
 const GridView = ({ products }) => {
   return (
-    <div className="gridview">
-      <div className="products_container">
+    <div className="grid-view">
+      <div className="products-container">
         {products.map((item) => {
           const { id, image, name, price } = item;
           return <Product id={id} image={image} name={name} price={price} />;
