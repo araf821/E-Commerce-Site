@@ -5,6 +5,7 @@ import reducer from "../reducers/filter_reducer";
 const initialStates = {
   products: [],
   filtered_products: [],
+  grid_view: false,
 };
 
 const FilterContext = createContext();
