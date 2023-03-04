@@ -760,11 +760,12 @@ footer {
 
   // Add to Cart section
   .add-to-cart {
-    margin-top: 1rem;
+    margin-top: 0.75rem;
 
     .color-container {
+      margin-top: 0.75rem;
       display: grid;
-      grid-template-columns: 125px 1fr;
+      grid-template-columns: 75px 1fr;
       align-items: center;
       margin-bottom: 1rem;
 
@@ -792,12 +793,32 @@ footer {
         justify-content: center;
         svg {
           font-size: 0.75rem;
-          color: var(--clr-white);
+          color: var(--clr-light-light);
         }
       }
-      
+
       .active {
         opacity: 1;
+      }
+    }
+
+    .amount-selector-container {
+      display: grid;
+      width: 140px;
+      justify-items: center;
+      grid-template-columns: (1fr 1fr 1fr);
+      align-items: center;
+
+      button {
+        background: transparent;
+        border-color: transparent;
+        cursor: pointer;
+        padding: 1rem 0;
+        width: 2rem;
+        height: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }

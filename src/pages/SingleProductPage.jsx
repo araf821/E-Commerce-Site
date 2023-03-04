@@ -55,7 +55,9 @@ const SingleProductPage = () => {
             <hr />
             <h4 className="price">{formatPrice(price)}</h4>
             <p className="desc">{description}</p>
-            <h5 className="stock" >{stock > 0 ? " In Stock" : " Out of Stock"}</h5>
+            <h5 className="stock">
+              {stock > 0 ? " In Stock (" + `${stock}` + ")" : " Out of Stock"}
+            </h5>
             {stock > 0 && <AddToCart product={item} />}
           </article>
         </div>
