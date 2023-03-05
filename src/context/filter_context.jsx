@@ -26,12 +26,15 @@ export const FilterProvider = ({ children }) => {
   const sortBy = (e) => {
     const value = e.target.value;
     dispatch({ type: "SORT_BY", payload: value });
-    console.log(state.sort)
   };
 
   useEffect(() => {
     dispatch({ type: "LOAD_PRODUCTS", payload: products });
   }, [products]);
+
+  useEffect(() => {
+    dispatch({ type: "SORT_PRODUCTS" });
+  }, [products, state.sort]);
 
   return (
     <FilterContext.Provider
