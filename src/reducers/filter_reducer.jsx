@@ -15,6 +15,10 @@ const filter_reducer = (state, action) => {
     return { ...state, grid_view: false };
   }
 
+  if (action.type === 'SORT_BY') {
+    return {...state, sort: action.payload}
+  }
+
   return state;
 };
 
