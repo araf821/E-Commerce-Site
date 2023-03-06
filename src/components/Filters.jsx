@@ -113,6 +113,7 @@ const Filters = () => {
             />
           </div>
         </form>
+        <button onClick={clearFilters}>Clear Filters</button>
       </div>
     </main>
   );

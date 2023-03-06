@@ -59,7 +59,7 @@ export const FilterProvider = ({ children }) => {
   };
 
   const clearFilters = () => {
-    dispatch({ type: "" });
+    dispatch({ type: "CLEAR_FILTERS" });
   };
 
   useEffect(() => {
