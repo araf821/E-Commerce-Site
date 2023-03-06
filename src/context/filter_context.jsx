@@ -41,6 +41,10 @@ export const FilterProvider = ({ children }) => {
   const filterBy = (e) => {
     let name = e.target.name;
     let value = e.target.value;
+    if (name === "company") {
+      value = e.target.textContent;
+    }
+
     dispatch({ type: "FILTER_BY", payload: { name, value } });
   };
 

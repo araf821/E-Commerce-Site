@@ -22,9 +22,7 @@ const Filters = () => {
   const categories = getUniqueValues(products, "category");
   const colors = getUniqueValues(products, "colors");
 
-  console.log(companies);
   console.log(categories);
-  console.log(colors);
 
   return (
     <main className="filters-component">
@@ -39,6 +37,28 @@ const Filters = () => {
               value={text}
               onChange={filterBy}
             />
+          </div>
+          <div className="form-control">
+            <h5>Company</h5>
+            {companies.map((company, index) => {
+              return (
+                <button key={index} name="company" onClick={filterBy}>
+                  {company}
+                </button>
+              );
+            })}
+          </div>
+          <div className="form-control">
+            <h5>Category</h5>
+            <select name="category" value={category} onChange={filterBy}>
+              {categories.map((cat, index) => {
+                return (
+                  <option key={index} value={cat}>
+                    {cat}
+                  </option>
+                );
+              })}
+            </select>
           </div>
         </form>
       </div>
