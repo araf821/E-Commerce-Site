@@ -1,4 +1,5 @@
 import { useFilterContext } from "../context/filter_context";
+import { getUniqueValues } from "../utils";
 
 const Filters = () => {
   const {
@@ -16,6 +17,14 @@ const Filters = () => {
     clearFilters,
     products,
   } = useFilterContext();
+
+  const companies = getUniqueValues(products, "company");
+  const categories = getUniqueValues(products, "category");
+  const colors = getUniqueValues(products, "colors");
+
+  console.log(companies);
+  console.log(categories);
+  console.log(colors);
 
   return (
     <main className="filters-component">
