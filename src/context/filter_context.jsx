@@ -44,6 +44,16 @@ export const FilterProvider = ({ children }) => {
     if (name === "company") {
       value = e.target.textContent;
     }
+    if (name === "color") {
+      value = e.target.dataset.color;
+    }
+    if (name === "price") {
+      // Format the price from a string to a value
+      value = Number(value);
+    }
+    if (name === "free_shipping") {
+      value = e.target.checked;
+    }
 
     dispatch({ type: "FILTER_BY", payload: { name, value } });
   };
