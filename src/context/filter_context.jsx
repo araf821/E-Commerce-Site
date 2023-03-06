@@ -38,17 +38,35 @@ export const FilterProvider = ({ children }) => {
     dispatch({ type: "SORT_BY", payload: value });
   };
 
+  const filterBy = (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+    dispatch({ type: "FILTER_BY", payload: { name, value } });
+  };
+
+  const clearFilters = () => {
+    dispatch({ type: "" });
+  };
+
   useEffect(() => {
     dispatch({ type: "LOAD_PRODUCTS", payload: products });
   }, [products]);
 
   useEffect(() => {
+    dispatch({ type: "FILTER_PRODUCTS" });
     dispatch({ type: "SORT_PRODUCTS" });
-  }, [products, state.sort]);
+  }, [products, state.sort, state.filters]);
 
   return (
     <FilterContext.Provider
-      value={{ ...state, setListView, setGridView, sortBy }}
+      value={{
+        ...state,
+        setListView,
+        setGridView,
+        sortBy,
+        filterBy,
+        clearFilters,
+      }}
     >
       {children}
     </FilterContext.Provider>
