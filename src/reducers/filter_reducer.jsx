@@ -57,7 +57,36 @@ const filter_reducer = (state, action) => {
   }
 
   if (action.type === "FILTER_PRODUCTS") {
-    return { ...state };
+    const { products } = state;
+    const { text, company, category, color, price, free_shipping } =
+      state.filters;
+    let tempProducts = [...products];
+
+    if (text) {
+      tempProducts = tempProducts.filter((item) => {
+        return item.name.toLowerCase().startsWith(text);
+      });
+    }
+
+    if (company !== "all") {
+      tempProducts = tempProducts.filter((item) => {
+        return item.company.toLowerCase() === company;
+      });
+    }
+
+    if (category !== "all") {
+      tempProducts = tempProducts.filter((item) => {
+        return item.category.toLowerCase() === category;
+      });
+    }
+
+    if (color !== "all") {
+      tempProducts = tempProducts.filter((item) => {
+        return item.colors.find((itemColour) => itemColour === color);
+      });
+    }
+
+    return { ...state, filtered_products: tempProducts };
   }
 
   if (action.type === "CLEAR_FILTERS") {
