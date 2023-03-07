@@ -86,6 +86,17 @@ const filter_reducer = (state, action) => {
       });
     }
 
+    if (free_shipping) {
+      tempProducts = tempProducts.filter((item) => {
+        return item.shipping === true;
+      });
+    }
+
+    // Filtering by price:
+    tempProducts = tempProducts.filter((item) => {
+      return item.price <= price;
+    });
+
     return { ...state, filtered_products: tempProducts };
   }
 
