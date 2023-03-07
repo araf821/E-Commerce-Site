@@ -45,6 +45,10 @@ body {
   min-height: calc(100vh - (15vh + 10rem));
 }
 
+.page-full {
+  min-height: calc(100vh - 10rem);
+}
+
 .section {
   padding: 5rem 0;
 }
