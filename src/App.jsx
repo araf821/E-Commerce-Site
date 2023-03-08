@@ -10,29 +10,32 @@ import Checkout from "./pages/CheckoutPage";
 import ErrorPage from "./pages/ErrorPage";
 import Sidebar from "./components/Sidebar";
 import CartPage from "./pages/CartPage";
+import AuthWrapper from "./pages/AuthWrapper";
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Sidebar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="products" element={<Products />} />
-        <Route path="products/:id" element={<SingleProduct />} />
-        <Route path="cart" element={<CartPage />} />
-        <Route
-          path="checkout"
-          element={
-            <PrivateRoute>
-              <Checkout />
-            </PrivateRoute>
-          }
-        />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
-      <Footer />
+      <AuthWrapper>
+        <Navbar />
+        <Sidebar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="products" element={<Products />} />
+          <Route path="products/:id" element={<SingleProduct />} />
+          <Route path="cart" element={<CartPage />} />
+          <Route
+            path="checkout"
+            element={
+              <PrivateRoute>
+                <Checkout />
+              </PrivateRoute>
+            }
+          />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+        <Footer />
+      </AuthWrapper>
     </BrowserRouter>
   );
 }
