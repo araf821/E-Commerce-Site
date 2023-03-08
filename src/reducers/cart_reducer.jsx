@@ -1,7 +1,7 @@
 const cart_reducer = (state, action) => {
   if (action.type === "ADD_TO_CART") {
     const { id, color, amount, product } = action.payload;
-
+    
     // To determine if the item already exists in our cart:
     const tempItem = state.cart.find((item) => item.id === id + color);
 
