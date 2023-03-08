@@ -66,6 +66,24 @@ const cart_reducer = (state, action) => {
     return { ...state, cart: newCart };
   }
 
+  if (action.type === "UPDATE_CART_TOTAL") {
+    const { total_items, order_total } = state.cart.reduce(
+      (total, cartItem) => {
+        const { price, amount } = cartItem;
+
+        total.total_items += amount;
+        total.order_total += price * amount;
+        return total;
+      },
+      {
+        total_items: 0,
+        order_total: 0,
+      }
+    );
+
+    return { ...state, total_items, order_total };
+  }
+
   return { ...state };
 };
 export default cart_reducer;
