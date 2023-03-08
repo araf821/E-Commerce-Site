@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useCartContext } from "../context/cart_context";
+import CartItem from "./CartItem";
 import CartSummary from "./CartSummary";
 
 const CartContent = () => {
@@ -16,7 +17,8 @@ const CartContent = () => {
       </div>
 
       {cart.map((item) => {
-        return <div>{item.name}</div>;
+        console.log(item);
+        return <CartItem item={item} />;
       })}
 
       <hr />
