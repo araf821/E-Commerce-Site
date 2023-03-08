@@ -7,6 +7,14 @@ const CartContent = () => {
 
   return (
     <main className="section-center">
+      <div className="column-headings">
+        <h5>Item</h5>
+        <h5>Price</h5>
+        <h5>Quantity</h5>
+        <h5>Subtotal</h5>
+        <hr />
+      </div>
+
       {cart.map((item) => {
         return <div>{item.name}</div>;
       })}
