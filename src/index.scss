@@ -805,26 +805,6 @@ footer {
         opacity: 1;
       }
     }
-
-    .amount-selector-container {
-      display: grid;
-      width: 140px;
-      justify-items: center;
-      grid-template-columns: (1fr 1fr 1fr);
-      align-items: center;
-
-      button {
-        background: transparent;
-        border-color: transparent;
-        cursor: pointer;
-        padding: 1rem 0;
-        width: 2rem;
-        height: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    }
   }
 
   // Convert to a grid layout on a bigger screen
@@ -843,6 +823,26 @@ footer {
     .product-images .bottom-images img {
       height: 75px;
     }
+  }
+}
+
+.amount-selector-container {
+  display: grid;
+  width: 140px;
+  justify-items: center;
+  grid-template-columns: (1fr 1fr 1fr);
+  align-items: center;
+
+  button {
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    padding: 1rem 0;
+    width: 2rem;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
