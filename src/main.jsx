@@ -7,6 +7,7 @@ import { CartProvider } from "./context/cart_context";
 import { FilterProvider } from "./context/filter_context";
 import { ProductsProvider } from "./context/products_context";
 import "./index.scss";
+import { UserProvider } from "./context/user_context";
 
 const auth0Domain = import.meta.env.VITE_AUTH0_DOMAIN;
 const auth0ClientId = import.meta.env.VITE_AUTH0_CLIENTID;
@@ -20,12 +21,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     }}
     cacheLocation="localstorage"
   >
-    <ProductsProvider>
-      <FilterProvider>
-        <CartProvider>
-          <App />
-        </CartProvider>
-      </FilterProvider>
-    </ProductsProvider>
+    <UserProvider>
+      <ProductsProvider>
+        <FilterProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </FilterProvider>
+      </ProductsProvider>
+    </UserProvider>
   </Auth0Provider>
 );
