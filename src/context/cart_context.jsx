@@ -30,7 +30,10 @@ export const CartProvider = ({ children }) => {
     dispatch({ type: "REMOVE_CART_ITEM", payload: id });
   };
 
-  const editItemAmount = (id, value) => {};
+  // The type represents a string of either increase or decrease
+  const editItemAmount = (id, type) => {
+    dispatch({ type: "EDIT_ITEM_AMOUNT", payload: { id, type } });
+  };
 
   const clearCart = () => {
     dispatch({ type: "CLEAR_CART" });
@@ -43,7 +46,7 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ ...state, addToCart, removeItem, clearCart }}
+      value={{ ...state, addToCart, removeItem, clearCart, editItemAmount }}
     >
       {children}
     </CartContext.Provider>

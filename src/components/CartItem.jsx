@@ -7,11 +7,11 @@ const CartItem = ({ item }) => {
   const { id, amount, color, image, max, name, price } = item;
 
   const increase = () => {
-    amount < max && setAmount(amount + 1);
+    editItemAmount(id, "increase");
   };
 
   const decrease = () => {
-    amount > 1 && setAmount(amount - 1);
+    editItemAmount(id, "decrease");
   };
 
   return (

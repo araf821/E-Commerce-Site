@@ -17,8 +17,7 @@ const CartContent = () => {
       </div>
 
       {cart.map((item) => {
-        console.log(item);
-        return <CartItem item={item} />;
+        return <CartItem key={item.id} item={item} />;
       })}
 
       <hr />
