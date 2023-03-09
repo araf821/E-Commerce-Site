@@ -23,8 +23,6 @@ const Filters = () => {
   const categories = getUniqueValues(products, "category");
   const colors = getUniqueValues(products, "colors");
 
-  console.log(categories);
-
   return (
     <main className="filters-component">
       <div className="content">
@@ -103,6 +101,7 @@ const Filters = () => {
                     className={`${
                       color === currentColor ? "color-btn active" : "color-btn"
                     }`}
+                    data-color={currentColor}
                   >
                     {color === currentColor ? <FaCheck /> : null}
                   </button>
