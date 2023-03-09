@@ -857,6 +857,10 @@ footer {
   form {
     text-align: center;
 
+    h5 {
+      text-align: left;
+    }
+
     .form-control {
       margin: 1rem auto;
     }
@@ -888,14 +892,25 @@ footer {
       }
     }
 
-    .categories {
+    .category-btns {
       margin-top: 0.25rem;
-      text-transform: capitalize;
-      letter-spacing: 0.15rem;
-      padding: 0.25rem 0.5rem;
-      background-color: transparent;
-      border: 1px solid black;
-      border-radius: 0.25rem;
+      display: grid;
+      // justify-content: start;
+
+      .active {
+        background-color: var(--clr-retro-blue);
+        color: var(--clr-light-light);
+      }
+
+      button {
+        cursor: pointer;
+        text-align: left;
+        border: none;
+        background-color: transparent;
+        text-transform: capitalize;
+        padding: 0.25rem 0.5rem;
+        letter-spacing: 0.15rem;
+      }
     }
 
     .colors {
@@ -930,9 +945,10 @@ footer {
           color: var(--clr-light);
         }
       }
-      
+
       .active {
         opacity: 1;
+        font-weight: 600;
       }
     }
   }

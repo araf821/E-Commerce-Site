@@ -58,7 +58,7 @@ const Filters = () => {
           </div>
           <div className="form-control">
             <h5>Category</h5>
-            <select
+            {/* <select
               className="categories"
               name="category"
               value={category}
@@ -71,10 +71,26 @@ const Filters = () => {
                   </option>
                 );
               })}
-            </select>
+            </select> */}
+            <div className="category-btns">
+              {categories.map((cat, index) => {
+                return (
+                  <button
+                    key={index}
+                    name="category"
+                    onClick={filterBy}
+                    className={`${
+                      category === cat.toLowerCase() ? "active" : null
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                );
+              })}
+            </div>
           </div>
           <div className="form-control">
-            <h5>Color</h5>
+            <h5 style={{ textAlign: "center" }}>Color</h5>
             <div className="colors">
               {colors.map((currentColor, index) => {
                 if (currentColor === "all") {
@@ -110,7 +126,7 @@ const Filters = () => {
             </div>
           </div>
           <div className="form-control">
-            <h5>Price</h5>
+            <h5 style={{ textAlign: "center" }}>Price</h5>
             <p>{formatPrice(price)}</p>
             <input
               type="range"
@@ -121,7 +137,7 @@ const Filters = () => {
               onChange={filterBy}
             />
           </div>
-          <div className="form-control">
+          <div className="form-control shipping-box">
             <label htmlFor="free_shipping">Free Shipping</label>
             <input
               type="checkbox"
