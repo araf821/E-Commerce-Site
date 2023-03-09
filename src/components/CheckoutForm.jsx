@@ -5,14 +5,16 @@ import {
   useStripe,
 } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { useCartContext } from "../context/cart_context";
 import { useUserContext } from "../context/user_context";
+import { formatPrice } from "../utils";
 
 const promise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC);
 
 const CheckoutForm = () => {
-  const { cart, total_items, shipping_fee, clearCart } = useCartContext();
+  const { cart, order_total, shipping_fee, clearCart } = useCartContext();
   const { myUser } = useUserContext();
 
   // For Stripe
@@ -24,8 +26,24 @@ const CheckoutForm = () => {
   const stripe = useStripe();
   const elements = useElements();
 
-  const createPaymentIntent = () => {
-    console.log("Payment intent");
+  const createPaymentIntent = async () => {
+    try {
+      const { data } = await axios.post(
+        "/.netlify/functions/create-payment-intent",
+        JSON.stringify({
+          cart,
+          order_total,
+          shipping_fee,
+        })
+      );
+      console.log(data);
+      setClientSecret(data.clientSecret);
+    } catch (error) {
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ message: error.message }),
+      };
+    }
   };
 
   useEffect(() => {
@@ -58,6 +76,21 @@ const CheckoutForm = () => {
 
   return (
     <div className="checkout-form section section-center">
+      <section className="checkout-info">
+        {success ? (
+          <article>
+            <h4>Your payment was successful!</h4>
+            <h4>Redirecting to home page shortly.</h4>
+          </article>
+        ) : (
+          <article>
+            <h4>Hello, {myUser && myUser.name}!</h4>
+            <p>Your order total is {formatPrice(order_total)} :(</p>
+            <p>For testing, use card number 4242 4242 4242 4242.</p>
+          </article>
+        )}
+      </section>
+
       <form id="payment-form" onSubmit={handleSubmit}>
         <CardElement
           id="card-element"
@@ -74,14 +107,6 @@ const CheckoutForm = () => {
             {error}
           </div>
         )}
-        <p className={success ? "result-message" : "result-message hidden"}>
-          Payment succeeded, see the result in your
-          <a href={`https://dashboard.stripe.com/test/payments`}>
-            {" "}
-            Stripe dashboard.
-          </a>{" "}
-          Refresh the page to pay again.
-        </p>
       </form>
     </div>
   );

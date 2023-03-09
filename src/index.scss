@@ -1021,6 +1021,14 @@ footer {
 .checkout-form {
   display: grid;
   place-items: center;
+
+  .checkout-info {
+    width: 30vw;
+    display: flex;
+    margin-bottom: 0.5rem;
+    line-height: 2rem;
+  }
+
   form {
     width: 30vw;
     align-self: center;
@@ -1077,7 +1085,7 @@ footer {
   #payment-request-button {
     margin-bottom: 32px;
   }
-  
+
   /* Buttons and links */
   button {
     background: var(--clr-retro-blue);
@@ -1120,11 +1128,13 @@ footer {
     -ms-transform: translateZ(0);
     transform: translateZ(0);
   }
+
   .spinner:before,
   .spinner:after {
     position: absolute;
     content: "";
   }
+
   .spinner:before {
     width: 10.4px;
     height: 20.4px;
@@ -1137,6 +1147,7 @@ footer {
     -webkit-animation: loading 2s infinite ease 1.5s;
     animation: loading 2s infinite ease 1.5s;
   }
+
   .spinner:after {
     width: 10.4px;
     height: 10.2px;
@@ -1159,9 +1170,22 @@ footer {
       transform: rotate(360deg);
     }
   }
+
+  @media only screen and (max-width: 1200px) {
+    form {
+      width: 60vw;
+    }
+    .checkout-info {
+      width: 60vw;
+    }
+  }
+
   @media only screen and (max-width: 600px) {
     form {
-      width: 80vw;
+      width: 90vw;
+    }
+    .checkout-info {
+      width: 90vw;
     }
   }
 }
