@@ -1,5 +1,6 @@
 import { useFilterContext } from "../context/filter_context";
 import { formatPrice, getUniqueValues } from "../utils";
+import { FaCheck } from "react-icons/fa";
 
 const Filters = () => {
   const {
@@ -38,19 +39,33 @@ const Filters = () => {
               onChange={filterBy}
             />
           </div>
-          <div className="form-control">
+          <div className="form-control companies">
             <h5>Company</h5>
-            {companies.map((company, index) => {
-              return (
-                <button key={index} name="company" onClick={filterBy}>
-                  {company}
-                </button>
-              );
-            })}
+            <div className="company-btns">
+              {companies.map((comp, index) => {
+                return (
+                  <button
+                    key={index}
+                    name="company"
+                    onClick={filterBy}
+                    className={`${
+                      company === comp.toLowerCase() ? "active" : null
+                    }`}
+                  >
+                    {comp}
+                  </button>
+                );
+              })}
+            </div>
           </div>
           <div className="form-control">
             <h5>Category</h5>
-            <select name="category" value={category} onChange={filterBy}>
+            <select
+              className="categories"
+              name="category"
+              value={category}
+              onChange={filterBy}
+            >
               {categories.map((cat, index) => {
                 return (
                   <option key={index} value={cat}>
@@ -71,6 +86,9 @@ const Filters = () => {
                       name="color"
                       onClick={filterBy}
                       data-color="all"
+                      className={`${
+                        color === "all" ? "all-btn active" : "all-btn"
+                      }`}
                     >
                       All
                     </button>
@@ -82,9 +100,11 @@ const Filters = () => {
                     name="color"
                     style={{ background: currentColor }}
                     onClick={filterBy}
-                    data-color={currentColor}
+                    className={`${
+                      color === currentColor ? "color-btn active" : "color-btn"
+                    }`}
                   >
-                    color
+                    {color === currentColor ? <FaCheck /> : null}
                   </button>
                 );
               })}

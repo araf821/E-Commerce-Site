@@ -847,6 +847,93 @@ footer {
 }
 
 ////////////////////////////////////////////////
+//                  Filters                   //
+////////////////////////////////////////////////
+
+.filters-component {
+  display: grid;
+  padding: 2rem 0;
+
+  form {
+    text-align: center;
+
+    .form-control {
+      margin: 1rem auto;
+    }
+
+    .search-box {
+      padding: 0.6rem 0.7rem;
+      outline: none;
+      width: 90%;
+      border-radius: 0.5rem;
+      border: none;
+    }
+
+    .company-btns {
+      margin-top: 0.25rem;
+      display: flex;
+      justify-content: space-around;
+
+      .active {
+        background-color: var(--clr-retro-blue);
+        color: var(--clr-light-light);
+      }
+
+      button {
+        border: none;
+        background-color: transparent;
+        text-transform: capitalize;
+        padding: 0.25rem 0.5rem;
+        letter-spacing: 0.15rem;
+      }
+    }
+
+    .categories {
+      margin-top: 0.25rem;
+      text-transform: capitalize;
+      letter-spacing: 0.15rem;
+      padding: 0.25rem 0.5rem;
+      background-color: transparent;
+      border: 1px solid black;
+      border-radius: 0.25rem;
+    }
+
+    .colors {
+      display: flex;
+      justify-content: center;
+      margin-top: 0.25rem;
+
+      .all-btn {
+        background-color: transparent;
+        border: none;
+        margin-right: 0.5rem;
+        letter-spacing: 0.15rem;
+        cursor: pointer;
+      }
+
+      .color-btn {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background: #222;
+        margin-right: 0.5rem;
+        border: none;
+        cursor: pointer;
+        opacity: 0.5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          font-size: 0.5rem;
+          color: var(--clr-light);
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////
 //                 Sort Bar                   //
 ////////////////////////////////////////////////
 
@@ -868,6 +955,11 @@ footer {
     label {
       display: inline-block;
       margin-right: 0.5rem;
+    }
+
+    form {
+      display: flex;
+      justify-content: space-between;
     }
   }
 
