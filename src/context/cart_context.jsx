@@ -42,7 +42,7 @@ export const CartProvider = ({ children }) => {
   // Save current cart to localStorage
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(state.cart));
-    dispatch({type: 'UPDATE_CART_TOTAL'})
+    dispatch({ type: "UPDATE_CART_TOTAL" });
   }, [state.cart]);
 
   return (

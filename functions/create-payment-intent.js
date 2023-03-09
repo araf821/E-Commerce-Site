@@ -6,7 +6,6 @@ const stripe = require("stripe")(process.env.VITE_STRIPE_SECRET);
 exports.handler = async function (event, context) {
   if (event.body) {
     const { cart, order_total, shipping_fee } = JSON.parse(event.body);
-    console.log(cart);
 
     const calculateOrderAmount = () => {
       return shipping_fee + order_total;
@@ -23,7 +22,7 @@ exports.handler = async function (event, context) {
         body: JSON.stringify({ clientSecret: paymentIntent.client_secret }),
       };
     } catch (error) {
-        // console.log(error)
+      // console.log(error)
     }
   }
 
