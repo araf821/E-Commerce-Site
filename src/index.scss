@@ -878,29 +878,33 @@ footer {
       display: flex;
       justify-content: space-around;
 
-      .active {
-        background-color: var(--clr-retro-blue);
-        color: var(--clr-light-light);
-      }
-
       button {
         border: none;
         background-color: transparent;
         text-transform: capitalize;
         padding: 0.25rem 0.5rem;
         letter-spacing: 0.15rem;
+        transition: 0.2s all linear;
+        &:hover {
+          transform: translateX(3px);
+          background-color: #6f99b143;
+        }
+      }
+
+      .active {
+        background-color: var(--clr-retro-blue);
+        color: var(--clr-light-light);
+
+        &:hover {
+          background-color: var(--clr-retro-blue);
+        }
       }
     }
 
     .category-btns {
       margin-top: 0.25rem;
       display: grid;
-      // justify-content: start;
-
-      .active {
-        background-color: var(--clr-retro-blue);
-        color: var(--clr-light-light);
-      }
+      transition: 0.3s all linear;
 
       button {
         cursor: pointer;
@@ -908,8 +912,23 @@ footer {
         border: none;
         background-color: transparent;
         text-transform: capitalize;
-        padding: 0.25rem 0.5rem;
+        padding: 0.4rem 0.5rem;
         letter-spacing: 0.15rem;
+        transition: 0.2s all linear;
+
+        &:hover {
+          transform: translateX(3px);
+          background-color: #6f99b143;
+        }
+      }
+
+      .active {
+        background-color: var(--clr-retro-blue);
+        color: var(--clr-light-light);
+
+        &:hover {
+          background-color: var(--clr-retro-blue);
+        }
       }
     }
 
@@ -949,6 +968,21 @@ footer {
       .active {
         opacity: 1;
         font-weight: 600;
+      }
+    }
+
+    .shipping-box {
+      display: flex;
+      justify-content: start;
+      letter-spacing: 0.15rem;
+
+      label {
+        margin-right: 0.25rem;
+      }
+
+      input {
+        cursor: pointer;
+        color: #222;
       }
     }
   }
