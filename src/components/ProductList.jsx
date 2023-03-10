@@ -7,16 +7,8 @@ const ProductList = () => {
 
   if (!products.length) {
     return (
-      <div
-        style={{
-          display: "grid",
-          placeItems: "center",
-          paddingTop: "10rem",
-        }}
-      >
-        <h5 style={{ fontSize: "2rem" }}>
-          Sorry, no products match the search criteria.
-        </h5>
+      <div className="no-products" >
+        <h5 >Sorry, no products match the search criteria.</h5>
       </div>
     );
   }

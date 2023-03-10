@@ -69,7 +69,7 @@ body {
   transition: all 0.3s ease;
   background: var(--clr-retro-blue);
   color: var(--clr-light-light);
-  padding: 0.5rem 0.4rem;
+  padding: 0.4rem 0.5rem;
 
   &:hover {
     color: var(--clr-retro-blue);
@@ -825,6 +825,21 @@ footer {
         opacity: 1;
       }
     }
+
+    .amount-container {
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      margin-top: 1rem auto;
+      background-color: var(--clr-retro-red);
+      border-color: var(--clr-retro-red);
+
+      &:hover {
+        background-color: transparent;
+        color: var(--clr-retro-red);
+      }
+    }
   }
 
   // Convert to a grid layout on a bigger screen
@@ -1141,6 +1156,19 @@ footer {
   .products {
     display: grid;
     margin: 0 auto 3rem;
+
+    .no-products {
+      padding: 5rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      h5 {
+        letter-spacing: 0.15rem;
+        font-size: 1.5rem;
+      }
+    }
   }
 
   @media (width > 750px) {
@@ -1149,16 +1177,26 @@ footer {
     }
 
     .products {
+      margin: 3rem auto;
       gap: 2rem;
       grid-template-columns: 250px 1fr;
+
+      .no-products {
+        height: 80%;
+        text-align: center;
+
+        h5 {
+          font-size: 2rem;
+        }
+      }
     }
-    
+
     .content {
       text-align: left;
     }
 
     .filters-component {
-      form {
+      .form-control {
         text-align: left;
       }
 
@@ -1170,9 +1208,20 @@ footer {
         display: block;
 
         button {
+          padding: 0.4rem 0.5rem;
           width: 100%;
           text-align: left;
         }
+      }
+
+      .category-btns {
+        button {
+          text-align: left;
+        }
+      }
+
+      .heading {
+        text-align: left;
       }
 
       .colors {
@@ -1229,15 +1278,7 @@ footer {
   }
 
   h4 {
-    color: var(--clr-light-light);
     text-transform: capitalize;
-    margin-bottom: 0.5rem;
-
-    span {
-      padding: 0.25rem 0.6rem;
-      background-color: var(--clr-retro-blue);
-      border-radius: 0.4rem;
-    }
   }
 
   .price {
@@ -1250,8 +1291,6 @@ footer {
   }
 
   .btn {
-    font-size: 0.5rem;
-    padding: 0.25rem 0.5rem;
   }
 
   @media (width < 520px) {
