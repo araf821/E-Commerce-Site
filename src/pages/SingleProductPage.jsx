@@ -43,7 +43,7 @@ const SingleProductPage = () => {
     <main className="single-product-page">
       <PageHero pageName={item.name} />
       <section className="section page section-center">
-        <Link to="/products">Back to Products</Link>
+        <Link to="/products" className="btn back-btn" >Back to Products</Link>
         <div className="divider">
           <ProductImages images={images} />
           <article className="product-info">

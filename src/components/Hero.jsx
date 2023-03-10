@@ -13,7 +13,7 @@ const Hero = () => {
           loves blue castello everyone loves fromage cheese slices airedale
           cheddar cream cheese.
         </p>
-        <Link to="/products">Shop Now</Link>
+        <Link to="/products" className="btn">Shop Now</Link>
       </article>
       <div className="img-container">
         <img src={herobcg} alt="background" className="img1" />

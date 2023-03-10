@@ -27,7 +27,7 @@ const Filters = () => {
     <main className="filters-component">
       <div className="content">
         <form onSubmit={(e) => e.preventDefault()}>
-          <div className="form-control">
+          <div style={{marginTop: '0'}} className="form-control ">
             <input
               type="text"
               name="text"
