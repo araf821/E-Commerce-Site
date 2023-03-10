@@ -7,7 +7,7 @@ const CartContent = () => {
   const { cart, clearCart } = useCartContext();
 
   return (
-    <main className="section-center">
+    <main className="cart-content-component section-center">
       <div className="column-headings">
         <h5>Item</h5>
         <h5>Price</h5>
@@ -20,7 +20,6 @@ const CartContent = () => {
         return <CartItem key={item.id} item={item} />;
       })}
 
-      <hr />
       <div className="cart-buttons">
         <Link to="/products">Continue Shopping</Link>
         <button onClick={clearCart}>Clear Cart</button>

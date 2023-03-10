@@ -8,7 +8,7 @@ const CartSummary = () => {
   const { myUser, loginWithRedirect } = useUserContext();
 
   return (
-    <main>
+    <main className="cart-summary-component">
       <div>
         <article>
           <h5>
@@ -23,9 +23,13 @@ const CartSummary = () => {
           </h4>
         </article>
         {myUser ? (
-          <Link to="/checkout">Checkout</Link>
+          <Link to="/checkout" className="btn">
+            Checkout
+          </Link>
         ) : (
-          <button onClick={loginWithRedirect}>Login</button>
+          <button onClick={loginWithRedirect} className="btn">
+            Login
+          </button>
         )}
       </div>
     </main>

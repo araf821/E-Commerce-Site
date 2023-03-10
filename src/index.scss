@@ -1378,6 +1378,98 @@ footer {
 }
 
 ////////////////////////////////////////////////
+//                Cart Content                //
+////////////////////////////////////////////////
+
+.cart-content-component {
+  margin: 3rem 0;
+
+  .column-headings {
+    display: none;
+  }
+
+  // ------------- Cart Item ----------------
+  .cart-item {
+    margin: 1rem auto;
+
+    .main-container {
+      display: flex;
+      text-transform: capitalize;
+
+      img {
+        border-radius: 0.5rem;
+        object-fit: cover;
+        width: 200px;
+        height: 200px;
+        margin-right: 0.75rem;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        > * {
+          padding: 0.5rem 0
+        }
+      }
+
+    }
+
+    .btn-container {
+      margin: 1rem 0;
+      padding: 0.25rem;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 0.5rem;
+      border: 2px solid #4a515575;
+
+      .amount-selector-container {
+        
+      }
+      
+    }
+  }
+
+}
+
+////////////////////////////////////////////////
+//               Cart Summary                 //
+////////////////////////////////////////////////
+
+.cart-summary-component {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    border: 1px solid #4a515575;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+
+    article {
+      h5 {
+        font-size: 1.15rem;
+      }
+
+      > * {
+        margin: 1rem 0;
+      }
+
+      h4,
+      h5,
+      p {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////
 //                  Stripe                    //
 ////////////////////////////////////////////////
 
