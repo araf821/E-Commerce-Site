@@ -5,7 +5,7 @@ import Sort from "../components/Sort";
 
 const Products = () => {
   return (
-    <main>
+    <main className="products-page" >
       <PageHero pageName="Products" />
       <div className="page">
         <section className="products section-center">

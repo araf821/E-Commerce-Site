@@ -90,7 +90,7 @@ const Filters = () => {
             </div>
           </div>
           <div className="form-control">
-            <h5 style={{ textAlign: "center" }}>Color</h5>
+            <h5 className="heading" >Color</h5>
             <div className="colors">
               {colors.map((currentColor, index) => {
                 if (currentColor === "all") {
@@ -126,7 +126,7 @@ const Filters = () => {
             </div>
           </div>
           <div className="form-control">
-            <h5 style={{ textAlign: "center" }}>Price</h5>
+            <h5 className="heading" >Price</h5>
             <p>{formatPrice(price)}</p>
             <input
               type="range"
