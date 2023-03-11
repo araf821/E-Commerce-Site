@@ -1,6 +1,6 @@
 # E-Commerce Store
 
-##### A complete e-commerce site created with React on the front-end alongside Auth0 for authentication, Stripe for payments, Formspree for newsletter sign-up handling and serverless functions to replace the need of a back-
+#### A complete e-commerce site created with React on the front-end alongside Auth0 for authentication, Stripe for payments, Formspree for newsletter sign-up handling and serverless functions to replace the need of a back-
 
 _Check out the completed project [here](https://cozee-land.netlify.app/)._
 
