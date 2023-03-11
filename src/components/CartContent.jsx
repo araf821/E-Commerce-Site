@@ -16,13 +16,18 @@ const CartContent = () => {
         <hr />
       </div>
 
+      <hr className="first-hr" />
       {cart.map((item) => {
         return <CartItem key={item.id} item={item} />;
       })}
 
       <div className="cart-buttons">
-        <Link to="/products">Continue Shopping</Link>
-        <button onClick={clearCart}>Clear Cart</button>
+        <Link className="btn btn-continue" to="/products">
+          Continue Shopping
+        </Link>
+        <button className="btn" onClick={clearCart}>
+          Clear Cart
+        </button>
       </div>
       <CartSummary />
     </main>

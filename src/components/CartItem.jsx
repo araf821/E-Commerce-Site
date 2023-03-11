@@ -1,6 +1,7 @@
 import { useCartContext } from "../context/cart_context";
 import { formatPrice } from "../utils";
 import ItemAmount from "./ItemAmount";
+import { FaTrashAlt } from "react-icons/fa";
 
 const CartItem = ({ item }) => {
   const { removeItem, editItemAmount } = useCartContext();
@@ -17,12 +18,12 @@ const CartItem = ({ item }) => {
   if (true) {
     return (
       <article className="cart-item">
-        <div className="main-container" >
+        <div className="main-container">
           <img src={image} alt={name} />
           <div>
-            <h5>{name}</h5>
+            <h5 className="name">{name}</h5>
             <p>
-              Color: <span style={{ color: `${color}` }}>color</span>
+              Color: <span style={{ backgroundColor: `${color}` }}></span>
             </p>
             <h5 className="price-mobile">{formatPrice(price)}</h5>
           </div>
@@ -30,7 +31,7 @@ const CartItem = ({ item }) => {
         <div className="btn-container">
           <ItemAmount increase={increase} decrease={decrease} amount={amount} />
           <button className="remove-btn" onClick={() => removeItem(id)}>
-            Remove
+            <FaTrashAlt />
           </button>
         </div>
         <hr />
