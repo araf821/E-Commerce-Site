@@ -8,7 +8,7 @@ const Hero = () => {
       <article>
         <h1>
           Design Your
-          <br /> Cozy Zone
+          <br /> Comfort Zone
         </h1>
         <p>
           Airedale hard cheese mozzarella. Pecorino melted cheese port-salut

@@ -15,13 +15,6 @@
   --default-transition: all 0.3s linear;
 }
 
-// Not sure if I'll be implementing these.
-// .dark-theme {
-// }
-
-// .light-theme {
-// }
-
 * {
   margin: 0;
   padding: 0;
@@ -52,6 +45,7 @@ body {
 .section {
   padding: 5rem 0;
 }
+
 .section-center {
   width: var(--default-width);
   margin: 0 auto;
@@ -92,7 +86,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--clr-dark); //gotta change
+  color: var(--clr-dark);
 }
 
 h1 {
@@ -162,7 +156,7 @@ h5 {
     display: none;
   }
 
-  @media (width > 990px) {
+  @media screen and (min-width: 990px) {
     .nav-toggle {
       display: none;
     }
@@ -225,9 +219,9 @@ h5 {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   width: 225px;
+  color: var(--clr-dark);
 
   .cart-btn {
-    color: black;
     font-size: 1.5rem;
     display: flex;
     align-items: center;
@@ -264,6 +258,7 @@ h5 {
     align-items: center;
     background: transparent;
     border-color: transparent;
+    color: var(--clr-dark);
     font-size: 1.5rem;
     cursor: pointer;
     svg {
@@ -386,7 +381,7 @@ footer {
   margin-bottom: 2rem;
 
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     letter-spacing: 0.2rem;
   }
 
@@ -487,6 +482,7 @@ footer {
 .services {
   background: var(--clr-retro-red);
   color: var(--clr-light);
+  padding: 3rem 0;
 
   h3,
   h4 {
@@ -495,15 +491,19 @@ footer {
     font-size: 2rem;
   }
 
+  h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
   p {
-    margin-bottom: 0;
+    margin-bottom: 1.5rem;
     line-height: 1.8;
     font-size: 1rem;
     color: var(--clr-light-dark);
   }
 
   .services-center {
-    margin-top: 4rem;
     display: grid;
     gap: 2.5rem;
   }
@@ -672,6 +672,12 @@ footer {
     margin: 0 auto;
     width: var(--default-width);
     max-width: 1170px;
+
+    @media screen and (max-width: 600px) {
+      font-size: 1.75rem;
+      
+    }
+
   }
 }
 
@@ -705,7 +711,7 @@ footer {
       width: 100%;
       transition: var(--default-transition);
 
-      @media (width < 895px) {
+      @media screen and (max-width: 895px) {
         height: 100%;
       }
     }
@@ -886,7 +892,7 @@ footer {
   }
 
   // Convert to a grid layout on a bigger screen
-  @media (width > 990px) {
+  @media screen and (min-width: 990px) {
     .divider {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -925,6 +931,7 @@ footer {
   button {
     background: transparent;
     border-color: transparent;
+    color: var(--clr-dark);
     cursor: pointer;
     padding: 1rem 0;
     width: 2rem;
@@ -1058,6 +1065,7 @@ footer {
         cursor: pointer;
         opacity: 0.5;
         transition: var(--default-transition);
+        color: var(--clr-dark);
       }
 
       .color-btn {
@@ -1143,7 +1151,7 @@ footer {
   margin-bottom: 1.5rem;
   column-gap: 1rem;
 
-  @media (width < 576px) {
+  @media screen and (max-width: 576px) {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 0.75rem;
@@ -1234,7 +1242,7 @@ footer {
     }
   }
 
-  @media (width > 750px) {
+  @media screen and (min-width: 750px) {
     .section-center {
       max-width: 1450px;
     }
@@ -1355,14 +1363,14 @@ footer {
     margin-bottom: 1rem;
   }
 
-  @media (width < 520px) {
+  @media screen and (max-width: 520px) {
     img {
       height: 60vw;
       width: 85vw;
     }
   }
 
-  @media (width > 992px) {
+  @media screen and (min-width: 992px) {
     img {
       width: 300px;
       height: 200px;
@@ -1523,7 +1531,7 @@ footer {
       }
     }
 
-    @media (width > 950px) {
+    @media screen and (min-width: 950px) {
       .main-container {
         img {
           border-radius: 0.5rem;
@@ -1599,7 +1607,7 @@ footer {
       text-align: center;
     }
 
-    @media (width > 750px) {
+    @media screen and (min-width: 750px) {
       article {
         h4,
         h5,
@@ -1844,7 +1852,7 @@ footer {
       margin-top: 0;
     }
 
-    @media (width < 600px) {
+    @media screen and (max-width: 600px) {
       h1 {
         font-size: 5rem;
       }
