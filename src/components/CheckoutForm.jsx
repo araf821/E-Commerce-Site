@@ -77,16 +77,13 @@ const CheckoutForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setProcessing(true);
-    const payload = await stripe.confirmCardPayment(clientSecret, {
-      payment_method: {
-        card: elements.getElement(CardElement),
-      },
-    });
+    // const payload = await stripe.confirmCardPayment(clientSecret, {
+    //   payment_method: {
+    //     card: elements.getElement(CardElement),
+    //   },
+    // });
 
-    if (payload.error) {
-      setError(`Payment failed ${payload.error.message}.`);
-      setProcessing(false);
-    } else {
+    setTimeout(() => {
       setError(null);
       setProcessing(false);
       setSuccess(true);
@@ -94,7 +91,7 @@ const CheckoutForm = () => {
         clearCart();
         navigate("/");
       }, 4000);
-    }
+    }, 3000);
   };
 
   return (
