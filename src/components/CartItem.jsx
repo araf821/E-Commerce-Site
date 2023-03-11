@@ -38,26 +38,5 @@ const CartItem = ({ item }) => {
       </article>
     );
   }
-
-  return (
-    <article className="cart-item">
-      <div className="item-container">
-        <img src={image} alt={name} />
-        <div>
-          <h5>{name}</h5>
-          <p>
-            Color: <span style={{ color: `${color}` }}>color</span>
-          </p>
-          <h5 className="price-mobile">{formatPrice(price)}</h5>
-        </div>
-      </div>
-      <h5 className="price">{formatPrice(price)}</h5>
-      <ItemAmount increase={increase} decrease={decrease} amount={amount} />
-      <h5 className="subtotal">{formatPrice(price * amount)}</h5>
-      <button className="remove-btn" onClick={() => removeItem(id)}>
-        Remove
-      </button>
-    </article>
-  );
 };
 export default CartItem;

@@ -1,4 +1,3 @@
-// Access it at domain/.netlify/functions/create-payment-intent
 require("dotenv").config;
 
 const stripe = require("stripe")(process.env.VITE_STRIPE_SECRET);
