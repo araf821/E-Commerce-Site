@@ -1546,6 +1546,28 @@ footer {
     display: flex;
     margin-bottom: 0.5rem;
     line-height: 2rem;
+    letter-spacing: 0.1rem;
+    padding: 0 0.5rem;
+    font-family: 'Lato', sans-serif;
+
+    article {
+      text-align: center;
+
+      .greeting {
+        background-color: var(--clr-retro-red);
+        color: var(--clr-light-light);
+      }
+
+      p span {
+        font-weight: 600;
+        text-decoration: underline;
+      }
+
+      p {
+        padding: 0.25rem 0;
+      }
+    }
+
   }
 
   form {

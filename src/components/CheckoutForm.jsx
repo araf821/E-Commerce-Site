@@ -107,9 +107,14 @@ const CheckoutForm = () => {
           </article>
         ) : (
           <article>
-            <h4>Hello, {myUser && myUser.name}!</h4>
-            <p>Your order total is {formatPrice(order_total)} :(</p>
-            <p>For testing, use card number 4242 4242 4242 4242.</p>
+            <h4 className="greeting" >Hello, {myUser && myUser.name}!</h4>
+            <p>
+              Your order total is <span>{formatPrice(order_total)}</span>!
+            </p>
+            <p>
+              For testing, use card number 4242 4242 4242 4242 and anything else
+              for the rest of the fields.
+            </p>
           </article>
         )}
       </section>
