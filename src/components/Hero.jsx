@@ -6,14 +6,19 @@ const Hero = () => {
   return (
     <section className="hero section-center">
       <article>
-        <h1>Design Your Comfort Zone</h1>
+        <h1>
+          Design Your
+          <br /> Cozy Zone
+        </h1>
         <p>
           Airedale hard cheese mozzarella. Pecorino melted cheese port-salut
           emmental babybel cheese and wine melted cheese manchego. Everyone
           loves blue castello everyone loves fromage cheese slices airedale
           cheddar cream cheese.
         </p>
-        <Link to="/products" className="btn">Shop Now</Link>
+        <Link to="/products" className="btn">
+          Shop Now
+        </Link>
       </article>
       <div className="img-container">
         <img src={herobcg} alt="background" className="img1" />

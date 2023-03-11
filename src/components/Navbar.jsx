@@ -12,10 +12,10 @@ const Navbar = () => {
       <div className="nav-content">
         <div className="nav-header">
           <Link to="/">
-            <h1>
+            <h1 className="brand-name">
               <span>
-                Brand
-                <span>Name</span>
+                Cozee
+                <span>Land</span>
               </span>
             </h1>
           </Link>

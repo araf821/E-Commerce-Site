@@ -15,7 +15,7 @@ const Contact = () => {
   return (
     <div className="contact-section">
       <section className="section section-center">
-        <h3>Join our newsletter and get 90% off everything!</h3>
+        <h3>Join our newsletter and get 0% off everything!</h3>
         <p>
           Next level tbh everyday carry, blog copper mug forage kitsch roof
           party pickled hammock kale chips tofu.
@@ -27,7 +27,7 @@ const Contact = () => {
             type="email"
             id="email"
             name="email"
-            placeholder="bebicat@gmail.com"
+            placeholder="user@email.com"
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
           <button type="submit" disabled={state.submitting}>

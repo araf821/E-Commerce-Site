@@ -6,7 +6,7 @@ const Services = () => {
       <div className="section-center">
         <article className="header">
           <h3>
-            custom furniture <br /> built only for you
+            custom furniture <br /> for everyone but you
           </h3>
           <p>
             Salvia glossier subway tile, leggings mustache YOLO semiotics chia.

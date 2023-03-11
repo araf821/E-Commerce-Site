@@ -98,7 +98,7 @@ const CheckoutForm = () => {
   };
 
   return (
-    <div className="checkout-form section section-center">
+    <div className="checkout-form section">
       <section className="checkout-info">
         {success ? (
           <article>
@@ -107,7 +107,7 @@ const CheckoutForm = () => {
           </article>
         ) : (
           <article>
-            <h4 className="greeting" >Hello, {myUser && myUser.name}!</h4>
+            <h4 className="greeting">Hello, {myUser && myUser.name}!</h4>
             <p>
               Your order total is <span>{formatPrice(order_total)}</span>!
             </p>

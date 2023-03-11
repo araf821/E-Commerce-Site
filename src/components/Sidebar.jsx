@@ -14,10 +14,10 @@ const Sidebar = () => {
         className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}
       >
         <div className="sidebar-header">
-          <h1>
+          <h1 className="brand-name">
             <Link to="/">
-              Brand
-              <span>Name</span>
+              Cozee
+              <span>Land</span>
             </Link>
           </h1>
           <button className="close-btn" onClick={closeSidebar}>
@@ -30,7 +30,9 @@ const Sidebar = () => {
             const { id, text, url } = link;
             return (
               <li key={id}>
-                <Link to={url} onClick={closeSidebar}>{text}</Link>
+                <Link to={url} onClick={closeSidebar}>
+                  {text}
+                </Link>
               </li>
             );
           })}
