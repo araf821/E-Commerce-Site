@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="nav-content">
         <div className="nav-header">
           <Link to="/">
-            <h1 className="brand-name">
+            <h1 className="brand-name title">
               <span>
                 Cozee
                 <span>Land</span>

@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="hero section-center">
       <article>
-        <h1>
+        <h1 >
           Design Your
           <br /> Comfort Zone
         </h1>
