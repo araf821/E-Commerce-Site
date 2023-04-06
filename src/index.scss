@@ -57,6 +57,7 @@ body {
   border: none;
   border: 2px solid var(--clr-retro-blue);
   letter-spacing: 0.15rem;
+  font-family: "Pally", sans-serif;
 
   border-radius: 5px;
   transition: all 0.3s ease;
@@ -290,7 +291,7 @@ footer {
     line-height: 1.25;
   }
 
-  @media (min-width: 776px) {
+  @media screen and (min-width: 776px) {
     flex-direction: row;
   }
 }
@@ -398,7 +399,7 @@ footer {
     font-size: 1rem;
   }
 
-  @media (min-width: 999px) {
+  @media screen and (min-width: 999px) {
     height: calc(100vh - 5rem);
     grid-template-columns: 1fr 1fr;
     gap: 8rem;
@@ -445,6 +446,11 @@ footer {
   background: var(--clr-retro-blue);
   color: var(--clr-light);
 
+  h2 {
+    letter-spacing: 0.25rem;
+    text-align: center;
+  }
+
   .products {
     margin: 3rem auto;
     display: grid;
@@ -472,7 +478,7 @@ footer {
     }
   }
 
-  @media (min-width: 576px) {
+  @media screen and (min-width: 576px) {
     .products {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
@@ -531,7 +537,7 @@ footer {
     }
   }
 
-  @media (min-width: 992px) {
+  @media screen and (min-width: 992px) {
     .header {
       display: grid;
       align-items: center;
@@ -539,13 +545,13 @@ footer {
     }
   }
 
-  @media (min-width: 576px) {
+  @media screen and (min-width: 576px) {
     .services-center {
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
   }
 
-  @media (min-width: 1280px) {
+  @media screen and (min-width: 1280px) {
     padding: 0;
 
     .section-center {
@@ -594,10 +600,12 @@ footer {
       border-top-right-radius: 0.5rem;
       border-bottom-right-radius: 0.5rem;
       cursor: pointer;
+      letter-spacing: 0.1rem;
+      font-family: "Pally", sans-serif;
     }
   }
 
-  @media (min-width: 1280px) {
+  @media screen and (min-width: 1280px) {
     .section-center {
       padding: 8rem 0;
     }
@@ -649,7 +657,7 @@ footer {
     margin-left: 0;
   }
 
-  @media (min-width: 992px) {
+  @media screen and (min-width: 992px) {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -685,6 +693,7 @@ footer {
 ////////////////////////////////////////////////
 
 .product {
+  font-family: "Lato", sans-serif;
   .img-container {
     position: relative;
     display: grid;
@@ -793,6 +802,7 @@ footer {
     .item-name {
       margin: 0.75rem 0;
       font-size: 2.5rem;
+      letter-spacing: 0.15rem;
     }
 
     .star-container {
@@ -820,12 +830,19 @@ footer {
       margin: 0.75rem 0;
     }
 
+    .price,
+    .stock,
+    .reviews {
+      font-family: "Lato", sans-serif;
+    }
+
     h5 span {
       font-weight: normal;
     }
 
     .desc {
       font-size: 1rem;
+      font-family: "Lato", sans-serif;
     }
   }
 
@@ -948,6 +965,7 @@ footer {
 .filters-component {
   display: grid;
   padding: 2rem 0;
+  font-family: "Lato", sans-serif;
 
   .content {
     text-align: center;
@@ -1317,16 +1335,19 @@ footer {
     height: 175px;
     object-fit: cover;
   }
+
   .products-container {
     display: grid;
     gap: 2rem 1.5rem;
   }
-  @media (min-width: 1050px) {
+
+  @media screen and (min-width: 1050px) {
     .products-container {
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  @media (min-width: 1170px) {
+
+  @media screen and (min-width: 1170px) {
     .products-container {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -1473,6 +1494,8 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        font-family: "Lato", sans-serif;
+
         > * {
           padding: 0.5rem 0;
         }
@@ -1483,7 +1506,7 @@ footer {
           height: 1rem;
           border-radius: 50%;
           margin-left: 4px;
-          margin-top: 2px;
+          margin-top: 4px;
         }
       }
     }
@@ -1576,6 +1599,7 @@ footer {
   justify-content: center;
   align-items: center;
   padding-bottom: 1rem;
+  font-family: "Lato", sans-serif;
 
   div {
     border: 1px solid #4a515575;
